@@ -21,6 +21,8 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     font-family: "Rubik", sans-serif;
     font-size: 15px;
@@ -34,7 +36,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
-        url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+    url("../fonts/roboto-v30-latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -43,7 +45,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-italic.woff2") format("woff2"),
-        url("../fonts/roboto-v30-latin-italic.woff") format("woff");
+    url("../fonts/roboto-v30-latin-italic.woff") format("woff");
 }
 
 @font-face {
@@ -52,7 +54,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
-        url("../fonts/roboto-v30-latin-500.woff") format("woff");
+    url("../fonts/roboto-v30-latin-500.woff") format("woff");
 }
 
 @font-face {
@@ -61,7 +63,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-500italic.woff2") format("woff2"),
-        url("../fonts/roboto-v30-latin-500italic.woff") format("woff");
+    url("../fonts/roboto-v30-latin-500italic.woff") format("woff");
 }
 
 @font-face {
@@ -70,7 +72,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-regular.woff2") format("woff2"),
-        url("../fonts/rubik-v23-latin-regular.woff") format("woff");
+    url("../fonts/rubik-v23-latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -79,7 +81,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-500.woff2") format("woff2"),
-        url("../fonts/rubik-v23-latin-500.woff") format("woff");
+    url("../fonts/rubik-v23-latin-500.woff") format("woff");
 }
 
 @font-face {
@@ -88,7 +90,7 @@ body {
     font-weight: 700;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-700.woff2") format("woff2"),
-        url("../fonts/rubik-v23-latin-700.woff") format("woff");
+    url("../fonts/rubik-v23-latin-700.woff") format("woff");
 }
 
 .container {
@@ -216,17 +218,28 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-image: linear-gradient(90deg, #1E96C8 15.07%, #37AEE2 85.96%);
     border-radius: 5px;
     text-decoration: none;
     font-weight: 500;
-    color: #fff;
     transition: box-shadow 0.3s ease;
 }
 
 .telegram-sub:hover {
-    background-image: linear-gradient(90deg, #37AEE2 15.07%, #1E96C8 85.96%);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-sub--dark {
+    color: #fff;
+    background-image: linear-gradient(90deg, #1E96C8 15.07%, #37AEE2 85.96%);
+}
+
+.telegram-sub--dark:hover {
+    background-image: linear-gradient(90deg, #37AEE2 15.07%, #1E96C8 85.96%);
+}
+
+.telegram-sub--white {
+    background-color: #fff;
+    color: #295093;
 }
 
 .telegram-sub__img {
@@ -269,6 +282,101 @@ body {
     display: flex;
 }
 
+.main-content {
+    flex-grow: 1;
+}
+
+.site-footer {
+    padding: 18px 0;
+    background-color: #295093;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.site-footer *:focus {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.site-footer__top {
+    display: flex;
+    align-items: center;
+}
+
+.site-footer__logo {
+    flex-shrink: 0;
+    display: flex;
+    padding: 10px;
+    background-color: #133C82;
+    border-radius: 5px;
+    margin-right: auto;
+}
+
+.site-footer__sub-text {
+    margin-right: 17px;
+    margin-left: 25px;
+    padding-right: 25px;
+}
+
+.site-footer__sub-text {
+    flex-shrink: 0;
+}
+
+.site-footer__divider {
+    height: 3px;
+    border: none;
+    background-color: #133C82;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.site-footer__nav-link {
+    display: inline-block;
+    color: #fff;
+}
+
+.site-footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-footer__about {
+    max-width: 365px;
+    margin-right: 110px;
+}
+
+.site-footer__heading {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+}
+
+.site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 520px;
+}
+
+.site-footer__nav-item {
+    width: 50%;
+    margin-bottom: 10px;
+    padding-right: 15px;
+}
+
+.site-footer__nav-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1060px) {
+    .site-footer__about,
+    .site-footer__nav {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 30px;
+    }
+}
+
 @media (max-width: 1000px) {
     .site-header {
         padding-top: 20px;
@@ -309,12 +417,26 @@ body {
         margin-top: 3px;
         margin-bottom: 3px;
     }
+
+    .site-footer__about,
+    .site-footer__nav {
+        width: 100%;
+    }
+
+    .site-footer__about {
+        order: 1;
+    }
+
+    .site-footer__nav {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 750px) {
     body {
         margin-top: 82px;
     }
+
     .site-header {
         position: fixed;
         z-index: 10;
@@ -349,11 +471,11 @@ body {
     .site-header__toggler:focus {
         box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
     }
-    
+
     .exchange-rates,
     .search-button,
     .language-toggler,
-    .telegram-sub {
+    .site-header__telegram-sub {
         display: none;
     }
 
@@ -371,12 +493,12 @@ body {
         box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease;
         transform: translateX(120%);
-        animation:  site-nav-slide-out 0.3s ease 1 forwards;
+        animation: site-nav-slide-out 0.3s ease 1 forwards;
     }
 
     .site-nav--open {
         display: block;
-        animation:  site-nav-slide-in 0.3s ease 1 forwards;
+        animation: site-nav-slide-in 0.3s ease 1 forwards;
     }
 
     .site-nav__list {
@@ -386,11 +508,11 @@ body {
     }
 
     .site-nav__item {
-        margin: 0 5px ;
+        margin: 0 5px;
         width: 100%;
     }
 
-     .site-nav__item:not(:last-child) {
+    .site-nav__item:not(:last-child) {
         border-bottom: 1px solid #515151;
     }
 
@@ -404,9 +526,23 @@ body {
         background-color: #295091;
         color: #fff;
     }
-    
+
     .top-banner {
         display: none;
+    }
+
+    .site-footer__top {
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .site-footer__sub-text {
+        order: 1;
+        width: 100%;
+        margin-top: 10px;
+        text-align: right;
+        padding: 0;
+        margin-right: 0;
     }
 }
 
@@ -417,6 +553,29 @@ body {
 
     .site-nav {
         width: 80%;
+    }
+
+    .site-footer__top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-footer__logo {
+        align-self: flex-start;
+        margin-right: 0;
+    }
+
+    .site-footer__sub-text {
+        order: 0;
+        margin-bottom: 15px;
+    }
+
+    .site-footer__telegram-sub {
+        align-self: flex-end;
+    }
+
+    .site-footer__nav-item {
+        width: 100%;
     }
 }
 
