@@ -532,6 +532,7 @@ body {
 .latest-popular-news {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 40px;
 }
@@ -586,9 +587,8 @@ body {
     margin-right: 20px;
 }
 
-.
-
 .news-list__img {
+    display: block;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -674,6 +674,62 @@ body {
     background-color: rgba(41, 80, 147, 0.8);
 }
 
+.popular-news-banner {
+    width: 386px;
+}
+
+.popular-news {
+    padding: 17px 20px;
+    margin-bottom: 20px;
+    background-color: #F6F6F9;
+    border-radius: 5px;
+}
+
+.popular-news__heading {
+    font-size: 20px;
+    line-height: 24px;
+    color: #202020;
+    margin-bottom: 6px;
+}
+
+.popular-news__item:not(:last-child) {
+    padding-bottom: 14px;
+    border-bottom: 4px solid #E4E4E4;
+    margin-bottom: 18px;
+}
+
+.popular-news__title {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 11px;
+}
+
+.popular-news__link {
+    color: #202020;
+    display: inline-block;
+}
+
+.popular-news__link:hover {
+    color: #295091;
+}
+
+.popular-news__date {
+    font-size: 14px;
+    line-height: 17px;
+    color: #7688A4;
+}
+
+.sidebar-banner__link {
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sidebar-banner__img {
+    display: block;
+}
+
 .site-footer {
     padding: 18px 0;
     background-color: #295093;
@@ -755,6 +811,40 @@ body {
     text-decoration: underline;
 }
 
+@media (max-width: 1240px) {
+    .news-list {
+        width: calc(794 / 1240 * 100%);
+    }
+
+    .news-list__item {
+        align-items: stretch;
+    }
+
+    .news-list__img-wrapper {
+        display: flex;flex-direction: column;
+        width: calc(252 / 794 * 100%);
+        margin-right: auto;
+    }
+
+    .news-list__img {
+        height: 100%;
+        display: block;
+        width: 100%;
+    }
+
+    .news-list__body {
+        width: calc(522 / 794 * 100%);
+    }
+
+    .popular-news-banner {
+        width: calc(386 / 1240 * 100%);
+    }
+
+    .popular-news__title {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 1150px) {
     .covid-info__heading {
         margin-right: 40px;
@@ -818,6 +908,13 @@ body {
         width: 100%;
         justify-content: center;
         margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 920px) {
+    .news-list,
+    .popular-news-banner {
+        width: 100%;
     }
 }
 
@@ -1031,6 +1128,37 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 15px;
+    }
+
+    .news-list {
+        margin-bottom: 40px;
+    }
+
+    .news-list__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .news-list__img-wrapper,
+    .news-list__body {
+        width: 100%;
+    }
+
+    .news-list__img-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .news-list__img {
+        height: auto;
+    }
+
+    .news-list__text {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .sidebar-banner__img {
+        width: 100%;
+        height: auto;
     }
 }
 
