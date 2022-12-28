@@ -443,9 +443,15 @@ body {
     left: 0;
 }
 
+.news-grid__date {
+    display: block;
+    color: #6B6D97;
+}
+
 .notifications {
     display: flex;
     align-items: center;
+    margin-bottom: 38px;
     border-radius: 5px;
     background-color: rgba(239, 186, 84, 0.18);
     padding: 25px 35px;
@@ -491,6 +497,120 @@ body {
 
 .notifications__button:focus {
     box-shadow: 0 0 0 4px rgba(255, 139, 54, 0.5);
+}
+
+.latest-popular-news {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.news-list {
+    width: 794px;
+}
+
+.news-list__heading {
+    margin-bottom: 13px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+}
+
+.news-list__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.news-list__item:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.news-list__img {
+    width: 252px;
+    height: 143px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.news-list__title {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.news-list__link {
+    display: inline-block;
+    color: #202020;
+    transition: color 0.3s ease;
+}
+
+.news-list__link::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+
+}
+
+.news-list__item:hover .news-list__link {
+    color: #295091;
+}
+
+.news-list__body {
+    width: 522px;
+}
+
+.news-list__list {
+    margin-bottom: 18px;
+}
+
+.news-list__text {
+    margin-bottom: 14px;
+}
+
+.news-list__date-wrapper {
+    display: flex;
+    align-items: center;
+    color: #7688A4;
+}
+
+.news-list__date-icon {
+    width: 18px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+.news-list__date {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.news-list__more-wrapper {
+    text-align: center;
+}
+
+.news-list__more-button {
+    border: none;
+    background-color: #295093;
+    border-radius: 5px;
+    padding: 10px 32px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.news-list__more-button:hover {
+    background-color: rgba(41, 80, 147, 0.8);
 }
 
 .site-footer {
