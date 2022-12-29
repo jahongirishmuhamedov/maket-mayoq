@@ -36,7 +36,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+        url("../fonts/roboto-v30-latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -45,7 +45,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-italic.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-italic.woff") format("woff");
+        url("../fonts/roboto-v30-latin-italic.woff") format("woff");
 }
 
 @font-face {
@@ -54,7 +54,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-500.woff") format("woff");
+        url("../fonts/roboto-v30-latin-500.woff") format("woff");
 }
 
 @font-face {
@@ -63,7 +63,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/roboto-v30-latin-500italic.woff2") format("woff2"),
-    url("../fonts/roboto-v30-latin-500italic.woff") format("woff");
+        url("../fonts/roboto-v30-latin-500italic.woff") format("woff");
 }
 
 @font-face {
@@ -72,7 +72,7 @@ body {
     font-weight: 400;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-regular.woff2") format("woff2"),
-    url("../fonts/rubik-v23-latin-regular.woff") format("woff");
+        url("../fonts/rubik-v23-latin-regular.woff") format("woff");
 }
 
 @font-face {
@@ -81,7 +81,7 @@ body {
     font-weight: 500;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-500.woff2") format("woff2"),
-    url("../fonts/rubik-v23-latin-500.woff") format("woff");
+        url("../fonts/rubik-v23-latin-500.woff") format("woff");
 }
 
 @font-face {
@@ -90,7 +90,7 @@ body {
     font-weight: 700;
     font-display: swap;
     src: url("../fonts/rubik-v23-latin-700.woff2") format("woff2"),
-    url("../fonts/rubik-v23-latin-700.woff") format("woff");
+        url("../fonts/rubik-v23-latin-700.woff") format("woff");
 }
 
 .container {
@@ -285,7 +285,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.site-nav__link:hover {
+.site-nav__link:hover,
+.sitenav__item--active .site-nav__link {
     color: #295091;
 }
 
